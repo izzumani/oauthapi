@@ -1,0 +1,21 @@
+version: '2.4'
+
+services: 
+    api_dev:
+        
+        build: 
+            context: .
+            target: api_development
+        
+        command: npm run dev
+
+        ports:
+            - '3000:3000'
+            - '3001:3001'
+        environment:
+            - API_PORT=3000
+            - SECRET_KEY="izzumani"
+            - TOKEN_EXPIRY="2" # Token expiry in 2 minutes
+
+# command: ./node_modules/nodemon/bin/nodemon.js --inspect=0.0.0.0:3001 app.js
+# init: /usr/libexec/docker-init
