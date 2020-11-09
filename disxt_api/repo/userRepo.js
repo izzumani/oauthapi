@@ -12,6 +12,20 @@ exports.list_of_users= [
 
 ];
 
+
+exports.list_of_products= [
+    {
+        
+        name:"Chocolate cake",
+        price:10,
+        description:"Chocolate Cake from the prime house",
+        created_by:"admin"
+        
+    }
+    
+
+];
+
 exports.user_token_expiry= [];
 
    

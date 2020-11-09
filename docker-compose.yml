@@ -15,7 +15,7 @@ services:
         environment:
             - API_PORT=3000
             - SECRET_KEY="izzumani"
-            - TOKEN_EXPIRY="2" # Token expiry in 2 minutes
+            - TOKEN_EXPIRY=2 # Token expiry in 2 minutes
 
 # command: ./node_modules/nodemon/bin/nodemon.js --inspect=0.0.0.0:3001 app.js
 # init: /usr/libexec/docker-init
