@@ -2,20 +2,38 @@ version: '2.4'
 
 services: 
     api_dev:
-        
         build: 
             context: .
-            target: api_development
+            target: api_development # multitarget development only
         
+        healthcheck:
+            test: curl -f http://127.0.0.1 || exit 1
+            interval: 2m30s
+            timeout: 60s
+            retries: 5
         command: npm run dev
 
         ports:
-            - '3000:3000'
-            - '3001:3001'
+            - '3000:3000' # exposed port
+            - '3001:3001' # nodemon is listening on this port
+        networks:
+            - dbnetwork
         environment:
-            - API_PORT=3000
-            - SECRET_KEY="izzumani"
+            - API_PORT=3000 
+            - SECRET_KEY=izzumani
             - TOKEN_EXPIRY=2 # Token expiry in 2 minutes
+            - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - MONGO_DB=disxt_db
+        depends_on: 
+            mongo:
+                condition: service_healthy # check if the mongo db has restarted successfully
 
-# command: ./node_modules/nodemon/bin/nodemon.js --inspect=0.0.0.0:3001 app.js
-# init: /usr/libexec/docker-init
+    mongo:
+        image: mongo:latest
+        healthcheck:
+            test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/test --quiet # run command to check if the Mongo db is running
+        networks:
+            - dbnetwork
+networks:
+    dbnetwork:

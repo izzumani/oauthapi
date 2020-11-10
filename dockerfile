@@ -19,7 +19,7 @@ ENV NODE_ENV=development
 
 RUN apk add --no-cache curl
 
-RUN npm install --only=development
+RUN npm install
 
 # CMD ["./node_modules/nodemon/bin/nodemon.js","./bin/www","--inspect=0.0.0.0:3001"]
 # EXPOSE 3000

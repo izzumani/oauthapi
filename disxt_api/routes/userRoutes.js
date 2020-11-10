@@ -39,6 +39,6 @@ router.post('/addnewproducts', user_controller.tokenValidation, user_controller.
 // POST request to update existing products
 router.post('/updateproducts', user_controller.tokenValidation, user_controller.update_product);
 // POST request to delete existing products
-router.post('/deleteproducts', user_controller.tokenValidation, user_controller.delete_product);
+router.get('/deleteproducts', user_controller.tokenValidation, user_controller.delete_product);
 module.exports = router;
 
