@@ -3,8 +3,8 @@
 **POST Method**
 http://localhost:3000/login
 {
-       "username":"admin",
-        "password":"change1234"
+       "username":"USER_NAME_FROM_EMAIL.",
+        "password":"PASSWORD_PROVIDED_FROM_EMAIL"
 }
 
 # --------------------------------------------------------------------------------------------------------------
