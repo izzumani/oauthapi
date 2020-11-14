@@ -1,10 +1,9 @@
 # Project Description
-This project demostrates use of JWT authentication when making API requests.
-The API has been developed using NodeJS, MongoDB and Docker.
+The API is basically developed using NodeJS, MongoDB and Docker.
 # POST MAN
 ## login with the link below and credentials
 **POST Method**
-http://localhost:3000/login
+http://HOST_NAME:PORT_NUMBER/login
 {
        "username":"USER_NAME_FROM_EMAIL.",
         "password":"PASSWORD_PROVIDED_FROM_EMAIL"
@@ -13,7 +12,7 @@ http://localhost:3000/login
 
 ## Add new users - ADMIN Role ONLY
 **POST Method**
-http://localhost:3000/addnewusers
+http://HOST_NAME:PORT_NUMBER/addnewusers
  {
                 "username":string,
                "password":string,
@@ -29,7 +28,7 @@ http://localhost:3000/addnewusers
 
 ## Get list of users - ADMIN Role ONLY
 **GET Method**
-http://localhost:3000/userslist/
+http://HOST_NAME:PORT_NUMBER/userslist/
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
@@ -43,7 +42,7 @@ http://localhost:3000/userdetails/?username=USER_NAME--> query prametrer
 
 ## Add new users - ADMIN Role ONLY
 **POST Method**
-http://localhost:3000/addnewproducts/
+http://HOST_NAME:PORT_NUMBER/addnewproducts/
  {
         "name":string,
         "price":Number,
@@ -58,21 +57,21 @@ http://localhost:3000/addnewproducts/
 
 ## Get list of products - EVERYONE
 **Get Method**
-http://localhost:3000/getproductlist/
+http://HOST_NAME:PORT_NUMBER/getproductlist/
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
 
 ## Get product details - EVERYONE
 **Get Method**
-http://localhost:3000/getproductdetails/?name=PARAM --- get query param
+http://HOST_NAME:PORT_NUMBER/getproductdetails/?name=PARAM --- get query param
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
 
 ## Update product details - ADMIN Role ONLY
 **POST Method**
-http://localhost:3000/updateproducts/
+http://HOST_NAME:PORT_NUMBER/updateproducts/
  {
         "name":string,
         "price":Number,
@@ -88,7 +87,7 @@ http://localhost:3000/updateproducts/
 
 ## Delete product details - ADMIN ONLY
 **Get Method**
-http://localhost:3000/deleteproducts/?name=PARAM --- get query param
+http://HOST_NAME:PORT_NUMBER/deleteproducts/?name=PARAM --- get query param
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
