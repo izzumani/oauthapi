@@ -1,5 +1,9 @@
 # Project Description
 The API is basically developed using NodeJS, MongoDB and Docker.
+## dockerfile
+This file has two sections for multi-stage  which include production and development.
+Production is derived from node-alpine image which install package targeted for production only.
+Development is derived from production and install all package.json.
 # POST MAN
 ## login with the link below and credentials
 **POST Method**

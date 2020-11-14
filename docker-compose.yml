@@ -24,7 +24,7 @@ services:
             - TOKEN_EXPIRY=2 # Token expiry in 2 minutes
             - MONGO_HOST=mongo
             - MONGO_PORT=27017
-            - MONGO_DB=disxt_db
+            - MONGO_DB=sample_db
         depends_on: 
             mongo:
                 condition: service_healthy # check if the mongo db has restarted successfully
