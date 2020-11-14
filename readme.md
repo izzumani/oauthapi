@@ -8,23 +8,23 @@ Development is derived from production and install all package.json.
 ## login with the link below and credentials
 **POST Method**
 http://HOST_NAME:PORT_NUMBER/login
-{
+```{
        "username":"USER_NAME_FROM_EMAIL.",
         "password":"PASSWORD_PROVIDED_FROM_EMAIL"
-}
+```}
 
 
 ## Add new users - ADMIN Role ONLY
 **POST Method**
 http://HOST_NAME:PORT_NUMBER/addnewusers
- {
+ ```{
                 "username":string,
                "password":string,
                "name":string,
                "lastname":string,
                "age":number,
                "role":string admin|client
-    }
+```    }
 
 > **HEADERS**
 > **KEY: Authorization**
@@ -47,13 +47,13 @@ http://localhost:3000/userdetails/?username=USER_NAME--> query prametrer
 ## Add new users - ADMIN Role ONLY
 **POST Method**
 http://HOST_NAME:PORT_NUMBER/addnewproducts/
- {
+ ```{
         "name":string,
         "price":Number,
         "description":String,
         "created_by":string
         
-    }
+ ```   }
 
 > **HEADERS**
 > **KEY: Authorization**
@@ -76,13 +76,13 @@ http://HOST_NAME:PORT_NUMBER/getproductdetails/?name=PARAM --- get query param
 ## Update product details - ADMIN Role ONLY
 **POST Method**
 http://HOST_NAME:PORT_NUMBER/updateproducts/
- {
+ ```{
         "name":string,
         "price":Number,
         "description":String,
       
         
-    }
+ ```   }
 
 > **HEADERS**
 > **KEY: Authorization**
