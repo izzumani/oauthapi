@@ -4,14 +4,16 @@ The API is basically developed using NodeJS, MongoDB and Docker.
 This file has two sections for multi-stage  which include production and development.
 Production is derived from node-alpine image which install package targeted for production only.
 Development is derived from production and install all package.json.
-# POST MAN
+# USE POSTMAN Application to call below API methods
 ## login with the link below and credentials
+This is the first step of generating a token key. 
+Client app should pass valid username and password. 
 **POST Method**
 http://HOST_NAME:PORT_NUMBER/login
 
 {
-       "username":"USER_NAME_FROM_EMAIL.",
-        "password":"PASSWORD_PROVIDED_FROM_EMAIL"
+       "username":"USER_NAME.",
+        "password":"PASSWORD"
 }
 
 
