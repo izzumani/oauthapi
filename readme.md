@@ -1,3 +1,6 @@
+# Project Description
+This project demostrates use of JWT authentication when making API requests.
+The API has been developed using NodeJS, MongoDB and Docker.
 # POST MAN
 ## login with the link below and credentials
 **POST Method**
@@ -7,7 +10,7 @@ http://localhost:3000/login
         "password":"PASSWORD_PROVIDED_FROM_EMAIL"
 }
 
-# --------------------------------------------------------------------------------------------------------------
+
 ## Add new users - ADMIN Role ONLY
 **POST Method**
 http://localhost:3000/addnewusers
@@ -23,21 +26,21 @@ http://localhost:3000/addnewusers
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
+
 ## Get list of users - ADMIN Role ONLY
 **GET Method**
 http://localhost:3000/userslist/
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
+
 ## Get users details - ADMIN Role ONLY
 **Get Method**
 http://localhost:3000/userdetails/?username=USER_NAME--> query prametrer
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
+
 ## Add new users - ADMIN Role ONLY
 **POST Method**
 http://localhost:3000/addnewproducts/
@@ -52,21 +55,21 @@ http://localhost:3000/addnewproducts/
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
+
 ## Get list of products - EVERYONE
 **Get Method**
 http://localhost:3000/getproductlist/
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
+
 ## Get product details - EVERYONE
 **Get Method**
 http://localhost:3000/getproductdetails/?name=PARAM --- get query param
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
+
 ## Update product details - ADMIN Role ONLY
 **POST Method**
 http://localhost:3000/updateproducts/
@@ -80,11 +83,12 @@ http://localhost:3000/updateproducts/
 
 > **HEADERS**
 > **KEY: Authorization**
-> **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**# --------------------------------------------------------------------------------------------------------------
+> **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**#
+
+
 ## Delete product details - ADMIN ONLY
 **Get Method**
 http://localhost:3000/deleteproducts/?name=PARAM --- get query param
 > **HEADERS**
 > **KEY: Authorization**
 > **VALUE: "TOKEN KEY PROVIDED DURING LOGIN**
-# --------------------------------------------------------------------------------------------------------------
